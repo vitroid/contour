@@ -6,6 +6,8 @@ import logging
 import yaplotlib as yp
 import itertools as it
 
+__version__ = "0.1"
+
 class Grid():
     def __init__(self, grid=None, file=None, ngrid=None, center=False, pbc=False):
         logger = logging.getLogger()
