@@ -6,7 +6,7 @@ import logging
 import yaplotlib as yp
 import itertools as it
 
-__version__ = "0.1"
+__version__ = "0.1.2"
 
 class Grid():
     def __init__(self, grid=None, file=None, ngrid=None, center=False, pbc=False):
@@ -18,7 +18,7 @@ class Grid():
         elif ngrid is not None:
             self.values = np.zeros(ngrid)
         if center:
-            x,y,z = values.shape
+            x,y,z = self.values.shape
             self.values = np.roll(self.values, x//2, axis=0)
             self.values = np.roll(self.values, y//2, axis=1)
             self.values = np.roll(self.values, z//2, axis=2)

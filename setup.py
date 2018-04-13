@@ -32,4 +32,10 @@ setup(
       url='https://github.com/vitroid/contour/',
       keywords=['contour','3D'],
       license='MIT',
+      install_requires=['numpy', 'yaplotlib>=0.1'],
+      entry_points = {
+              'console_scripts': [
+                  'contour3d = contour3d:main',
+              ]
+          }
 )
